@@ -1,0 +1,34 @@
+.sectionCarrousel{
+    width: 100%;
+    height: 400px;
+    background-color: rgb(188, 232, 247);
+    display: grid;
+    grid-template-columns: repeat(3,32%);
+    grid-template-rows: 100%;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+}
+.sectionCarrousel .carrouselItem{
+    width: 100%;
+    height: 95%;
+    border:1px solid black;
+    border-radius: 2%;
+    background-color: rgb(201, 234, 245);
+}
+.sectionCarrousel .carrouselItem img{
+    width: 20%;
+    border-radius: 50%;
+    margin: 30px 0px 0px 20px;
+}
+.sectionCarrousel .carrouselItem h2{
+    font-size: 2.1rem;
+    margin: 3px 0px 10px 20px;
+}
+.sectionCarrousel .carrouselItem p{
+    font-size: 1.3rem;
+    padding-left: 9px;
+}
+.spanShop{
+    text-decoration: underline;
+}

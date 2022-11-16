@@ -1,4 +1,4 @@
-import Anchor from "../anchor/Anchor"
+import Anchor from "../anchorGlobal/Anchor"
 import "./presentacion.css"
 function SectionBienvenida({ texth2 , textP , img}){
     return(

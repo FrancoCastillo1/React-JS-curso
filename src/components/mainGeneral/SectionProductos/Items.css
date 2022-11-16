@@ -1,0 +1,109 @@
+.filtradoContainer{
+    margin: 0px auto;
+    width: 85%;
+    height: 150px;
+    background-color: rgb(250, 246, 242);
+    border: 1px solid rgb(209, 209, 209);
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: 100%;
+}
+.filtradoContainer button{
+    border: 1px solid rgb(209, 209, 209);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+}
+.divContainerProductos{
+    width: 85%;
+    margin:30px auto;
+    margin-left:150px ;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(4,20%);
+    gap: 20px;
+    grid-auto-rows:430px ;
+}
+.itemCompra{
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(161, 161, 161);
+    border-radius: 3%; 
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 55% 45%;
+}
+.itemCompra .imgItem{
+    width: 90%;
+    height: 90%;
+    margin: auto;
+}
+.itemCompra .imgItem img{
+    width: 100%;
+    height: 100%;
+}
+.itemCompra .divContenido{
+    width: 94%;
+    height: 100%;
+    margin: 0px auto;
+}
+.divContenido h2{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.divContenido p{
+    text-align: center;
+    font-size: 1.2rem;
+}
+.divContenido .buttonBlack{
+    margin-left: 30px;
+    width:70% ;
+}
+/*Item Detail */
+.productsDetail{
+    width: 85%;
+    height: 450px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 100%;
+    border: 1px solid rgb(224, 224, 224);
+}
+.imgD{
+    width: 90%;
+    height: 90%;
+    margin: auto;
+}
+.imgD img{
+    width: 100%;
+    height: 100%;
+}
+.infoDe{
+    width: 100%;
+    height: 90%;
+    margin: auto;
+}
+.infoDe h2{
+    font-size: 2.8rem;
+}
+.infoDe p{
+    font-size: 1.5rem;
+}
+/*conatdor */
+.contador{
+    width: 20%;
+    height: 40px;
+    display: grid;
+    border:1px solid rgb(224, 224, 224) ;
+    grid-template-columns: repeat(3,33%);
+    grid-template-rows: 100%;
+}
+.contador .mod{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}

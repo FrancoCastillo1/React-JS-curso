@@ -1,7 +1,7 @@
 const datos =[
 {
 id:1,
-/* img: "/img/samsumg03 productos.jfif", */
+img: "/img/samsumg03 productos.jfif",
 nombre : "Samsumg A03",
 precio:4260,
 Stock:4,
@@ -10,6 +10,7 @@ subcategoria:"Samsumg"
 },
 {
   id:2,
+  img:"",
   nombre:"Samsumg Note 10",
   precio:4464,
   Stock:17,
@@ -19,6 +20,7 @@ subcategoria:"Samsumg"
 
 {
   id:3,
+  img:"/img/tostadora-1.jfif",
   nombre:"Tostadora Blue",
   precio:2273,
   Stock:18,
@@ -37,6 +39,7 @@ subcategoria:"Samsumg"
 
 {
   id:5,
+  img:"/img/horno-1.jfif",
   nombre:"Horno Map",
   precio:3865,
   Stock:14,
@@ -63,6 +66,7 @@ subcategoria:"Samsumg"
 
 {
   id:8,
+  img:"/img/PARLANTE-LG.webp",
   nombre:"Parlante LG 8093",
   precio:4133,
   Stock:4,
@@ -97,6 +101,7 @@ subcategoria:"Samsumg"
 
 {
   id:14,
+  nombre:"Adidas Argentina",
   precio:3426,
   Stock:18,
   categoria:"Ropa",
@@ -105,6 +110,7 @@ subcategoria:"Samsumg"
 
 {
   id:15,
+  img:"/img/horno-2.jfif",
   nombre:"Horno DX",
   precio:2508,
   Stock:13,
@@ -137,6 +143,7 @@ subcategoria:"Samsumg"
 },
 {
   id:21,
+  img:"/img/horno-3.jfif",
   nombre:"Horno XD",
   precio:2732,
   Stock:3,
@@ -155,6 +162,7 @@ subcategoria:"Samsumg"
 
 {
   id:23,
+  img:"/img/tostadora-2.jfif",
   nombre:"Tostada ForEach",
   precio:3893,
   Stock:24,
@@ -173,6 +181,7 @@ subcategoria:"Samsumg"
 
 {
   id:25,
+  img:"/img/tostadora-3.jfif",
   nombre:"Tostadora Lee",
   precio:3699,
   Stock:30,
@@ -182,6 +191,7 @@ subcategoria:"Samsumg"
 
 {
   id:26,
+  img:"/img/samsumg03s.webp",
   nombre:"Samsumg A03S",
   precio:2348,
   Stock:23,

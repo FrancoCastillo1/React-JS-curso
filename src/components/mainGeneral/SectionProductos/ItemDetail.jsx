@@ -1,12 +1,9 @@
 import ItemCount from "../ItemCount/ItemCount";
 import AnchorJSX from "../anchorGlobal/Anchor";
-import "./Items.css"
+import "./Items.css";
+import { Link } from "react-router-dom";
 function ItemDetail({product}){
-    function meterCarrito(){
-       /*  const acceder = document.querySelector(".acceso")
-        console.log(acceder) */
-        alert("Has metido"/* , acceder.textContent  */, "a tu carrito")
-    }
+    const urlCategory = `/products/categoria/${product.categoria}`
     return(
         <main className="mainDetalles">
                 <section className="productsDetail">
@@ -19,7 +16,12 @@ function ItemDetail({product}){
                         <p>Stock:{product.Stock}</p>
                         <ItemCount stock={product.Stock}/>
                         <p>Categoria:{product.categoria}, Subcategoria:{product. subcategoria}</p>
-                        <AnchorJSX text="Comprar" onClick={meterCarrito} />
+                        <div className="buttonsConatiner">
+                        <AnchorJSX text="Comprar"  event={meterCarrito} />
+                        <Link to={urlCategory}>
+                        <AnchorJSX text="Ver productos similares" className="buttonCategory" />
+                        </Link>
+                        </div>
                     </div>
                 </section>
             </main>

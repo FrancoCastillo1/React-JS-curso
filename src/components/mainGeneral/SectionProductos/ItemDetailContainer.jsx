@@ -8,7 +8,6 @@ function ItemDetailContainer(/* {img , name,stock,price,categoria,subcategoria} 
     const [arrayPro , setArrayPro] = useState([])
     async function capturar(){ 
         const capturarArray = await promesaDemorar(id)
-       console.log( "xdddddd",capturarArray)
        setArrayPro(capturarArray)
      }
     useEffect(()=>{

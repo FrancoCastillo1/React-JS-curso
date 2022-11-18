@@ -1,7 +1,7 @@
 import "./Anchor.css"
-function AnchorJSX({text}){
+function AnchorJSX({text ,event}){
     return(
-        <button className="buttonBlack" path="./productos/detalles/" >{text}</button> 
+        <button className="buttonBlack" path="./productos/detalles/" onClick={event}>{text}</button> 
     )
 }
 export default AnchorJSX

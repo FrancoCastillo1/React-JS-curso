@@ -21,7 +21,7 @@
     text-decoration: none;
     font-size: 1.2rem;
 }
-.headerNav nav a:hover{
+.headerNav nav .aHover:hover{
     color: green;
 }
 .aCategory{
@@ -56,4 +56,22 @@
 }
 .aCategory ul li a:hover{
     color: rgb(105, 105, 105);
+}
+.cartContent{
+    width: 10%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+}
+.cartContent .aCart{
+   width: 100%;
+   height: 90%;
+}
+.cartContent span{
+    align-self: flex-end;
+    padding: 3px;
+    font-size: 1rem;
+    border-radius: 999px;
+    background-color: green;
+    color: white;
 }

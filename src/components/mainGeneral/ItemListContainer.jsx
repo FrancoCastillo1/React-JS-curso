@@ -1,22 +1,35 @@
-import datos from "../mainGeneral/Json/MOCK_DATA"
-import Item from "../mainGeneral/SectionProductos/Item";
+import {getItems} from "./Json/firebase";
+import { FaSpinner } from "react-icons/fa";
+import { useState , useEffect} from "react";
+import ItemList from "./ItemList";
+import ErrorURL from "./Error404";
 function ItemListContainer(){
-   return(
-        <main className="sectionProducts">
-            <section className="divContainerProductos">
-            {datos.map((producto , i)=>{
-                return(
-                    <Item key={i}
-                    id={producto.id}
-                    img={producto.img}
-                    name={producto.nombre}
-                    stock={producto.Stock}
-                    precio={producto.precio}
-                    />
-                )
-            })}
-            </section>
-        </main>
-   )
+    const [arrayPro , setArrayPro] = useState([])
+    const [load , setLoad] = useState(false)
+    async function extarerPromesa(){
+       try{
+            const extarer = await getItems()
+            console.log(extarer)
+            setArrayPro(extarer)
+             setLoad(true)         
+        }catch{
+            <ErrorURL error={"500"} causa="No es problema tuyo!,son errores de nuestros servidores, ten panciencia que pronto estará solucionado" img={"https://robohash.org/845"} />
+        }
+    }
+    useEffect(()=>{
+        extarerPromesa()
+    },[])
+    if(load){
+        return(
+            <ItemList recorrido={arrayPro} />
+        ) 
+    }else{
+        return(
+            <main>
+                <FaSpinner/>
+            </main>
+        )
+
+    }
 }
 export default ItemListContainer

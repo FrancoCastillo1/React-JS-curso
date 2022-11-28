@@ -1,7 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useState , useEffect } from "react";
 import  {CapturarCategoria} from "../Json/promesaDemorar";
+/* import { getItems } from "../Json/firebase"; */
 import Item from "./Item";
+/* import { Link } from "react-router-dom"; */
 function ItemCategory(){
         const [arrayCat , setArrayCat ] = useState([])
         const {categoria} = useParams()
@@ -15,7 +17,7 @@ function ItemCategory(){
         return(
             <main className="sectionProducts">
                 <h1 className="productsSimilar">Productos similares</h1>
-            | <section className="divContainerProductos">
+             <section className="divContainerProductos">
                 {arrayCat.map((producto , i)=>{
                 return(
                     <Item key={i}

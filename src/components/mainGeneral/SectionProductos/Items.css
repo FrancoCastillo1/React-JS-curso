@@ -99,6 +99,11 @@
 .buttonsConatiner button:first-child{
     margin-bottom: 10px;
 }
+.buttonTogether{
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+}
 /*conatdor */
 .contador{
     width: 20%;

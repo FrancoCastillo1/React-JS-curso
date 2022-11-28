@@ -6,12 +6,12 @@ const Header = () =>{
         <header className="headerNav">
             <nav>
                 <h2 className="oneShotTitle">The One Shop</h2>
-                <Link to="/">Inicio</Link>
-                <Link to="/products">Catalogo</Link>
-                <a href="#" className="aCategory">Categoria 
+                <Link to="/" className="aHover">Inicio</Link>
+                <Link to="/products" className="aHover">Catalogo</Link>
+                <a href="#" className="aCategory aHover" >Categoria 
                 <ul>
                     <li>
-                        <Link to="/products/categoria/Celular">Celulares</Link>
+                        <Link to="/products/categoria/Celular">Celulares</Link> {/*se interpreta como un a */}
                     </li>
                     <li>
                         <Link to="/products/categoria/Audio">Audio</Link> {/*aca remmplazamos los parámetros creados anteriormente,deben estar igual alas llaves del objeto */}

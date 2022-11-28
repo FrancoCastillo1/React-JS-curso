@@ -1,13 +1,13 @@
-import { useState } from "react"
-function ItemCount({stock}){
-   const [contador , setContador] = useState(1)
+/* import { useContext } from "react"; */
+/* import { cartContext } from "../../../context/cartContext"; */
+function ItemCount({stock , contador,setContador /* ,product */}){
+    /* const {addToCart}= useContext(cartContext);
+    addToCart(product,contador) */
     const sumarCont = () =>{
-       contador < stock? setContador(contador +1):
-       setContador(contador +0)
+       contador < stock && setContador(contador +1)
     }
     const restarCont = () =>{
-        contador > 1 ? setContador(contador -1):
-        setContador(contador +0)
+        contador > 1 && setContador(contador -1)
     }
     return(
         <div className="contador">
@@ -17,4 +17,4 @@ function ItemCount({stock}){
         </div>
     )
 }
-export default ItemCount
+export default ItemCount 

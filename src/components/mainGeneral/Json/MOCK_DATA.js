@@ -13,7 +13,7 @@ subcategoria:"Samsumg"
   img:"",
   nombre:"Samsumg Note 10",
   precio:4464,
-  Stock:17,
+  Stock:0,
   categoria:"Celular",
   subcategoria:"Samsumg"
 },
@@ -32,6 +32,7 @@ subcategoria:"Samsumg"
   id:4,
   nombre:"MOTO G9 POWER",
   precio:2893,
+  descuento:0.3,
   Stock:4,
   categoria:"Celular",
   subcategoria:"Motorola"  
@@ -60,7 +61,7 @@ subcategoria:"Samsumg"
   id:7,
   nombre:"Parlantes Gfast",
   precio:3245,
-  Stock:21,
+  Stock:0,
   categoria:"Audio"
 },
 
@@ -113,7 +114,7 @@ subcategoria:"Samsumg"
   img:"/img/horno-2.jfif",
   nombre:"Horno DX",
   precio:2508,
-  Stock:13,
+  Stock:0,
   categoria:"Electrodomésticos",
   subcategoria:"Horno"
 },
@@ -122,7 +123,7 @@ subcategoria:"Samsumg"
   id:16,
   nombre:"Adidas 077",
   precio:3614,
-  Stock:27,
+  Stock:0,
   categoria:"Ropa",
   subcategoria:"Pantalón"
 },
@@ -183,6 +184,7 @@ subcategoria:"Samsumg"
   id:25,
   img:"/img/tostadora-3.jfif",
   nombre:"Tostadora Lee",
+  descuento:0.4,
   precio:3699,
   Stock:30,
   categoria:"Electrodomésticos",

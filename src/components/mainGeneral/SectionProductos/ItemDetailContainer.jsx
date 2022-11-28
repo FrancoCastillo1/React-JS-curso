@@ -10,9 +10,9 @@ function ItemDetailContainer(/* {img , name,stock,price,categoria,subcategoria} 
         const capturarArray = await promesaDemorar(id)
        setArrayPro(capturarArray)
      }
-    useEffect(()=>{
-         capturar()
-    },[])
+     useEffect(() => {
+        capturar()
+      },[]);
     return(
         <ItemDetail product={arrayPro}/>
     )

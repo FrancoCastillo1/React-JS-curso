@@ -6,8 +6,10 @@ import {FaOpencart} from "react-icons/fa"
 function CardNav(){
     const getItmesCart = useContext(cartContext)
     return(
-       /*  <Link to="/cart" className="cartContent"><FaOpencart className="aCart"/></Link> */
-        <span>{getItmesCart.itemsInCart() ? getItmesCart.itemsInCart():"0"}</span>
+        <Link to="/cart" className="cartContent">
+            <span>{getItmesCart.itemsInCart()}</span>
+            <FaOpencart className="aCart"/>
+        </Link>
     )
 }
 export default CardNav

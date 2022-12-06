@@ -1,7 +1,7 @@
 import datos from "./MOCK_DATA";
-export function promesaDemorar(id) {
+export function promesaDemorar(index) {
     return new Promise((resolve, reject) => {
-        const encontrar = datos.find((data) => data.id == id);
+        const encontrar = datos.find((data) => data.index == index);
         encontrar == undefined && reject("Item no encontardo")
         setTimeout(()=> {
             resolve(encontrar)

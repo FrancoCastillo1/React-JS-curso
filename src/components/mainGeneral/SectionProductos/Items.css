@@ -91,23 +91,19 @@
     font-size: 1.5rem;
 }
 .buttonsConatiner{
-    width: 50%;
-    height: fit-content;
+    width: 60%;
+    height: 30%;
+    justify-content: space-between;
     display: flex;
     flex-direction: column;
 }
-.buttonsConatiner button:first-child{
-    margin-bottom: 10px;
-}
-.buttonTogether{
-    display: flex;
-    width: 70%;
-    justify-content: space-around;
+.buttonsConatiner button{
+    margin-top: 10px;
 }
 /*conatdor */
 .contador{
-    width: 20%;
-    height: 40px;
+    width: 40%;
+    height: 70px;
     display: grid;
     border:1px solid rgb(224, 224, 224) ;
     grid-template-columns: repeat(3,33%);

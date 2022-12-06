@@ -1,8 +1,7 @@
-/* import { useContext } from "react"; */
-/* import { cartContext } from "../../../context/cartContext"; */
-function ItemCount({stock , contador,setContador /* ,product */}){
-    /* const {addToCart}= useContext(cartContext);
-    addToCart(product,contador) */
+import { useState} from "react"
+import AnchorJSX from "../anchorGlobal/Anchor";
+function ItemCount({stock,event,product}){
+    const [contador , setContador] = useState(1);
     const sumarCont = () =>{
        contador < stock && setContador(contador +1)
     }
@@ -10,11 +9,14 @@ function ItemCount({stock , contador,setContador /* ,product */}){
         contador > 1 && setContador(contador -1)
     }
     return(
+        <>
         <div className="contador">
             <div className="mod" onClick={sumarCont}>+</div>
             <div className={`mod`}>{contador}</div>
-            <div className="mod" onClick={restarCont} >-</div>
+            <div className="mod" onClick={restarCont}>-</div>
         </div>
+        <AnchorJSX text="Comprar" event={() => event(product,contador)} />
+        </>
     )
 }
 export default ItemCount 

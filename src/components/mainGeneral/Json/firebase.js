@@ -1,32 +1,30 @@
 import { initializeApp } from "firebase/app";
-/* import { getAnalytics } from "firebase/analytics"; */
-import { getFirestore ,collection ,getDocs ,doc , getDoc , query ,where} from "firebase/firestore"
-const firebaseConfig = { 
-  apiKey: "AIzaSyBMmpFz_8-1FapcgNimoRsXP8rixnmzcII",
-  authDomain: "reactecomerse-2d301.firebaseapp.com",
-  projectId: "reactecomerse-2d301",
-  storageBucket: "reactecomerse-2d301.appspot.com",
-  messagingSenderId: "869377549441",
-  appId: "1:869377549441:web:13535d0443ddd7b030d980",
-  measurementId: "G-15R4LEMMF8"
-}; //este header es el que identifica a nuestra base de datos
-
-const app = initializeApp(firebaseConfig); // inicializamos firebase
-const get = getFirestore(app) //inicializamos nuestra base de datos de  firebase
-export async function getItems() {
+import { getFirestore ,collection ,getDocs ,doc , getDoc , query ,where, addDoc, } from "firebase/firestore"
+const firebaseConfig = {
+  apiKey: "AIzaSyDuoSjiCyW4_zhFAMj5RQW-cX_yafBaDOI",
+  authDomain: "reactecomerse-d0f59.firebaseapp.com",
+  projectId: "reactecomerse-d0f59",
+  storageBucket: "reactecomerse-d0f59.appspot.com",
+  messagingSenderId: "957738109252",
+  appId: "1:957738109252:web:f957463eeaa1e9bf24ef11",
+  measurementId: "G-5XEB7DXFFZ"
+};
+const app = initializeApp(firebaseConfig); 
+const get = getFirestore(app) 
+export async function getItems(categoria){
   const coleccionProdRef = collection(get, "products"); //hacemos referecia(identificamos una coleccion completa)
- /*  const queryCat = query(coleccionProdRef, where("categoria", "==", categoria));
-  if(queryCat) {
-    const documentSnap = await getDoc(queryCat);
+  const queryCat = query(coleccionProdRef, where("categoria", "==", categoria));
+  if(queryCat == true) {
+    const documentSnap = await getDocs(queryCat);
     const documentData = documentSnap.docs.map((docs) => {
       return {
-        ...docs.data(), // aca lo que hace es meter todo lo de docs.data(que el spreed no lo mete como objeto,deja las propiedades sueltas) y como es un map es por cada,por lo que se ira repitiendo
-        id: docs.id, // aca crea una nueva propiedad llamda "id", todo esto se retorna en un nuevo objeto
+        ...docs.data(),
+        id: docs.id,
       };
     });
     return documentData;
-  }else { */
-    const documentSnap = await getDocs(coleccionProdRef); //obtenemos todos los documentos de esa coleccion(snap == obetener)
+  }else {
+    const documentSnap = await getDocs(coleccionProdRef); 
     const documentsData = documentSnap.docs.map((docs) => {
       return {
         ...docs.data(),
@@ -34,25 +32,29 @@ export async function getItems() {
       };
     });
     return documentsData;
- /*  } */
+  }
 }
 export async function capturarID(id){
-  const documentRef = doc(get, "productos",id) // hacemos referencia al documento, le pasamos como parametro la base de datos, el nombre dela coleccion y el id(propio de la funcion)
-  const documentSnap = await getDoc(documentRef) //leo el documento
+  const documentRef = doc(get, "products",id) 
+  const documentSnap = await getDoc(documentRef) 
   return{
     ...documentSnap.data(),
     id:documentSnap.id
-  } // retornamos el resolve
+  }
 }
-export async function CapturarCategoria(categoria){
-  const collectionRef = collection(get,"products")
-  const queryCat = query(collectionRef , where("categoria" ,"==", categoria))
-  const documentSnap = await getDoc(queryCat);
-    const documentData = documentSnap.docs.map((docs) => {
-      return {
-        ...docs.data(), // aca lo que hace es meter todo lo de docs.data(que el spreed no lo mete como objeto,deja las propiedades sueltas) y como es un map es por cada,por lo que se ira repitiendo
-        id: docs.id, // aca crea una nueva propiedad llamda "id", todo esto se retorna en un nuevo objeto
-      };
-    });
-    return documentData;
+export async function createOrder(idOrder){
+  const coleccionOrder = collection(get , "order")
+  const docOrder = await addDoc(coleccionOrder,idOrder)
+  await addDoc(coleccionOrder,{orderId : docOrder.id})
+  return docOrder.id
+}
+export  async function ordenExistente(id){
+  const coleccionOrder = collection(get , "order")
+  const queryID = query(coleccionOrder, where("orderID", "==", id));
+  if(queryID){
+    const leerDoc = await getDoc(queryID)
+    return{
+      ...leerDoc.data(),
+    }
+  }
 }

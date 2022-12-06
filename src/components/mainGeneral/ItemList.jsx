@@ -7,6 +7,7 @@ function ItemList({recorrido}){
             return(
                 <Item key={i}
                 id={producto.id}
+                index={producto.index}
                 img={producto.img}
                 name={producto.nombre}
                 stock={producto.Stock}

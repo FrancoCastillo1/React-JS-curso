@@ -1,3 +1,4 @@
+/*header */
 .headerNav{
     width: 100%;
     height: 80px;
@@ -36,8 +37,9 @@
     border: 1px solid rgb(236, 236, 236) ;
     background-color:  rgb(243, 241, 241);
     display: grid;
+    height: 120px;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(2,50%);
+    grid-template-rows: repeat(3,33%);
     display: none;
 }
 .aCategory ul li{
@@ -74,4 +76,70 @@
     border-radius: 999px;
     background-color: green;
     color: white;
+}
+/*cart */
+/* .cartNone{
+    width: 35%;
+    height: 220px;
+    margin: 130px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cartNone .redIcon{
+    width: 80%;
+    height: 90%;
+    color: red;
+}
+.cartNone h2{
+    text-align: center;
+} */
+.sectionCart{
+    width: 85%;
+    min-height: 160px;
+    max-height: fit-content;
+    margin: 35px auto;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 100%;
+    border: 1px solid black;
+}
+.sectionCart .itemsinCart{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+.itemsinCart .itemCart{
+    width: 90%;
+    height: 80px;
+    margin: 5px auto;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(246, 250, 253);
+    border: 1px solid black;
+    justify-content: space-between;
+}
+.itemCart span{
+    font-size: 1.2rem;
+}
+.itemCart .closeItem{
+    color: red;
+}
+.containerBottoms{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.containerBottoms .botonesCart{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
 }

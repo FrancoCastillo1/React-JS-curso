@@ -4,10 +4,16 @@ export const cartContext = createContext()
 export function CartContext(prop){
    const [agregar,setAgregar] = useState([]) // este estado es inmutable
     function addToCart(count, product){
-       let newAgregar = [...agregar]//todo lo que agregar,metelo aca 
-       product.count = count
-       newAgregar.push(product) //donde agrego es aca,ya que no es un estado    
-       setAgregar(newAgregar) //agrego lo que es mutable a lo inmutable
+      let itemRepetido = agregar.findIndex((item)=> item.index === product.index )
+      let newAgregar = [...agregar]
+        if(itemRepetido !== -1){
+            newAgregar[itemRepetido].count += count
+            setAgregar(newAgregar)
+        }else{
+            product.count = count
+            newAgregar.push(product) 
+            setAgregar(newAgregar)
+        }
      }
     function itemsInCart(){
         if(agregar.length >=1){
@@ -21,7 +27,7 @@ export function CartContext(prop){
     }
     function priceCart(){
         const precio = agregar.reduce((acumm,item)=>{
-            return acumm + item.precio
+            return acumm + item.precio*item.count
         },0)
         return precio
     }    
@@ -30,10 +36,11 @@ export function CartContext(prop){
            setAgregar([])
         }
     }
-    function removeCart(index){
-      const itemRemove = agregar.findIndex((item)=> item.index === index)
-       agregar.splice(0,itemRemove) 
-
+    function removeCart(id){
+      const itemRemove = agregar.findIndex((item)=> item.id === id)
+      let nuevoArray = [...agregar]
+      nuevoArray.splice(itemRemove,1)
+      setAgregar(nuevoArray)
     }
     let valores ={
         addToCart,

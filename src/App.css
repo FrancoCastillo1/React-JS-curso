@@ -3,16 +3,10 @@
   margin: 0;
   box-sizing: border-box;
 }
-/* body{
-  margin: 0;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
-} otra técnica de dejar abajo el footer */
 /*main */
 main{
   min-height: 60vh;
-  max-height: fit-content; /*deja abajo el footer */
+  max-height: fit-content; 
 }
 /*Error 404 */
 .error404{
@@ -30,7 +24,6 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
-  /* align-items: center; */
 }
 .error404 .img img{
   width: 90%;
@@ -46,4 +39,10 @@ main{
 }
 .error404 .info p{
   font-size: 1.7rem;
+}
+/*Load */
+.loadOval{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

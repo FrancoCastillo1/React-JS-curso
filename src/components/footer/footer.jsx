@@ -1,5 +1,3 @@
-/* import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; */
 import "./footer.css"
 import { FaFacebook , FaYoutube ,FaTwitter ,FaInstagram} from "react-icons/fa";
 function Footer(){

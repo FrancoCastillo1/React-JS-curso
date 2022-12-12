@@ -1,0 +1,16 @@
+/*orden pedido */
+.h2Pago{
+    margin-top: 20px;
+    text-align: center;
+}
+.comprobanteDePago{
+    width: 45%;
+    height: fit-content;
+    margin: 20px auto;
+    border: 1px solid black;
+    padding: 10px;
+}
+.productsOrden{
+    border-top: 1px solid rgb(172, 172, 172);
+    border-bottom:1px solid rgb(172, 172, 172) ;
+}

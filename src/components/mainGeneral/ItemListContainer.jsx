@@ -3,11 +3,12 @@ import { FaSpinner } from "react-icons/fa";
 import { useState , useEffect} from "react";
 import ItemList from "./ItemList";
 import ErrorURL from "./Error404";
+import Loading from "../Loading";
 function ItemListContainer(){
     const [arrayPro , setArrayPro] = useState([])
     const [load , setLoad] = useState(null)
     async function extarerPromesa(){
-       getItems("none").then((res)=>{
+       getItems().then((res)=>{
             setArrayPro(res)
             setLoad(true)          
         })
@@ -24,7 +25,7 @@ function ItemListContainer(){
     }else{
         if(load ===null){
         return(
-               <main><FaSpinner/></main> 
+               <Loading/>
         )
         }
         else if(load ===false){

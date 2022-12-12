@@ -1,0 +1,24 @@
+.iconoText{
+    width: 45%;
+    height: 220px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.redIcon{
+    width: 100%;
+    height: 80%;
+    color: red;
+}
+.progresoExitoso{
+    width: 100%;
+    height: 80%;
+    color: green;
+}
+.IconoText h2{
+    font-size: 1.2rem;
+}
+.IconoText h2 span{
+    color:rgb(60, 60, 199) ;
+}

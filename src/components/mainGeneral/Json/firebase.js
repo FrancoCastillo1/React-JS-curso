@@ -11,28 +11,28 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig); 
 const get = getFirestore(app) 
-export async function getItems(categoria){
-  const coleccionProdRef = collection(get, "products"); //hacemos referecia(identificamos una coleccion completa)
-  const queryCat = query(coleccionProdRef, where("categoria", "==", categoria));
-  if(queryCat == true) {
-    const documentSnap = await getDocs(queryCat);
-    const documentData = documentSnap.docs.map((docs) => {
-      return {
-        ...docs.data(),
-        id: docs.id,
-      };
-    });
-    return documentData;
-  }else {
-    const documentSnap = await getDocs(coleccionProdRef); 
-    const documentsData = documentSnap.docs.map((docs) => {
+export async function getItems(){
+  const coleccionProdRef = collection(get, "products");
+  const documentSnap = await getDocs(coleccionProdRef);
+  const documentsData = documentSnap.docs.map((docs) => {
       return {
         ...docs.data(),
         id: docs.id,
       };
     });
     return documentsData;
-  }
+}
+export async function capturarCategoria(categoria){
+  const coleccionProdRef = collection(get, "products");
+  const queryCat = query(coleccionProdRef, where("categoria", "==", categoria));
+  const documentSnap = await getDocs(queryCat);
+  const documentsData = documentSnap.docs.map((docs) => {
+    return {
+      ...docs.data(),
+      id: docs.id,
+    };
+  });
+  return documentsData;
 }
 export async function capturarID(id){
   const documentRef = doc(get, "products",id) 
@@ -45,16 +45,27 @@ export async function capturarID(id){
 export async function createOrder(idOrder){
   const coleccionOrder = collection(get , "order")
   const docOrder = await addDoc(coleccionOrder,idOrder)
-  await addDoc(coleccionOrder,{orderId : docOrder.id})
   return docOrder.id
 }
-export  async function ordenExistente(id){
+export  async function ordenExistente(){
   const coleccionOrder = collection(get , "order")
-  const queryID = query(coleccionOrder, where("orderID", "==", id));
-  if(queryID){
-    const leerDoc = await getDoc(queryID)
-    return{
-      ...leerDoc.data(),
-    }
+  const documentSnap = await  getDocs(coleccionOrder)
+  const documentData = documentSnap.docs.map((docs) => {
+    return {
+      ...docs.data(),
+      id: docs.id,
+    };
+  });
+  return documentData
+}
+export async function mandarUser(user){
+  const coleccionUser =collection(get,"Users")
+  const leerDato = await getDocs(coleccionUser)
+  const averiguar = leerDato.docs.some((dato)=> dato.data().email == user.email)
+  if(averiguar){
+    return false
+  }else{
+    await addDoc(coleccionUser,user)
+    return true
   }
 }

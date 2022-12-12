@@ -1,4 +1,3 @@
-/* import "../Json/MOCK_DATA"; */
 import AnchorJSX from "../anchorGlobal/Anchor";
 import "./Items.css"
 import {Link} from "react-router-dom"

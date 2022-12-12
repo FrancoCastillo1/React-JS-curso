@@ -3,15 +3,18 @@ import { useContext } from "react"
 import { cartContext } from "../../context/cartContext"
 import {useNavigate } from "react-router-dom"
 import {createOrder} from "../mainGeneral/Json/firebase"
+import {FaWindowClose} from "react-icons/fa"
+import {MdOutlineRemoveShoppingCart} from "react-icons/md"
+import IconoText from "../mainGeneral/Iconos/IconoText"
 function CartView(){
-    const {clearCart,agregar,priceCart} =useContext(cartContext)
+    const {clearCart,agregar,priceCart,removeCart} =useContext(cartContext)
     const navegar = useNavigate()
     async function handelCheckout(){
+        const local = JSON.parse(localStorage.getItem("User"))
         const order={
             buyer:{
-                Nombre:"Franco",
-                email:"francocastillo@gamil.com",
-                phone:"5378493"
+              nombre:local.nombre,
+              email:local.email,
                 },
                 items:agregar,
                 total:priceCart(),
@@ -21,26 +24,35 @@ function CartView(){
             navegar(`/gracias/${orderID}`)
             clearCart()
         }
-    if(agregar.length ==0) return <main><h2>Carrito vacio</h2></main>
+    if(agregar.length ==0){
+        return(
+            <IconoText icono={<MdOutlineRemoveShoppingCart className="redIcon"/>} text="El carrito se encuentra vacío" />
+        ) 
+    } 
     return(
-            <section>
+        <main>
+            <section className="sectionCart" >
+                <div className="itemsinCart">
                 {agregar.map((item,i)=>{
                 return( 
-                <>
                 <div key={i} className="itemCart">
-                    <h2>{item.nombre}</h2>
-                    <span>Unidades:{item.count}</span>
-                    <span>${item.precio}</span>    
+                    <span>{item.nombre}</span>
+                    <span>Unidades: {item.count}</span>
+                    <span>Precio c/u: ${item.precio}</span>
+                    <span><FaWindowClose onClick={()=> removeCart(item.id)} className="closeItem"  ></FaWindowClose></span>    
                 </div>
-                </>
                 )
                 })}
+                </div>
                 <div className="containerBottoms">
-                <div className="total"><h2>Total de la compra{priceCart()}</h2></div>
+                <h2>Total de la compra: ${priceCart()}</h2>
+                 <div className="botonesCart">
                     <AnchorJSX text="Vaciar Carrito" event={clearCart} />
                     <AnchorJSX text="Finalizar Compra" event={handelCheckout} />
+                 </div>
                 </div>
             </section>
+        </main>
         )
 }
 export default CartView

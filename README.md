@@ -1,70 +1,29 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto fue echo en  [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
-
+## Autor
+El autor de este proyecto fue Franco Castillo ;)
 ### `npm start`
+Con este comando se abre el [http://localhost:3000](http://localhost:3000) en el navegador
+### `Firebase`
+Usé esta base de datos proporcionada por Google para guardar el pedido,usuario y la orden que ejecutó el usuario
+### `React Router DOM`
+Con este sistema pude hacer multiples rutas para cumplir con el objetivo de React(SPA o Single Page Aplication) donde se puede observar rutas dinamicas creadas principalmente a través de la base de datos de Firebase.
+### `Componentes`
+Con los componentes parece que React es un JavasCript de import/export pero no,ya que puedes meter HTML e incluso CSS dentro de un componente(y no me refiero a importarlo,si no de literalmente hacerlo dentro de un componente) además de poder reutilizarlos😉, por lo que no, los componentes no es un Javascript de import/export y lo podes ver en mi proyecto :)
+**Dato curioso:¿Con React se puede emular un falso Backend?**
+Bajo el concepto de que podes crear multiples rutas de forma dinamica y usar Firebase para guardar tus datos de forma segura e incluso autenticar usuarios, si, se puede considerar a React(junto a Fireabse) como un falso Backend 😮
+## Segui Leyendo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Si queres aprender sobre esta forma de incializar React(ahorrarte molestias de instalar todo por partes) [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Y si queres aprender React de forma actuzalizada[React documentation](https://beta.reactjs.org/).
 
-### `npm test`
+### Virtual DOM
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Aprender como funciona el [Virtual DOM](https://es.reactjs.org/docs/faq-internals.html#:~:text=%C2%BFQu%C3%A9%20es%20el%20DOM%20virtual,proceso%20se%20conoce%20como%20reconciliaci%C3%B3n.)
 
-### `npm run build`
+### Jasvascript necesario para aprender ReactJS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Bases Javascript para[ReactJS](https://www.youtube.com/watch?v=lVqHiTCIRQg)

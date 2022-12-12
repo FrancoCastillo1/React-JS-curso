@@ -7,7 +7,7 @@ import { cartContext } from "../../../context/cartContext";
 function ItemDetail({product}){
     const {addToCart}= useContext(cartContext);
     const meterCarrito = (contador,product) => addToCart(product,contador) 
-    const {Stock ,categoria ,descuento ,precio,nombre,subcategoria,img} = product
+    const {Stock ,categoria ,descuento ,precio,nombre,img} = product
     const urlCategory = `/products/categoria/${categoria}`
     return(
         <main className="mainDetalles">
@@ -20,7 +20,7 @@ function ItemDetail({product}){
                         {descuento && <p style={{textDecoration:"line-through"}} >{precio}</p>}
                         <p>${descuento ?Math.round(precio*(1-descuento)):precio}</p>
                         <p>{Stock === 0 ?"Producto sin stock":`Stock:${Stock}`}</p>
-                        <p>Categoria:{categoria}, Subcategoria:{ subcategoria} </p>
+                        <p>Categoria:{categoria}</p>
                         <div className="buttonsConatiner">
                         {Stock >0  && <ItemCount stock={Stock} product={product} event={meterCarrito}/>}  
                         <Link to={urlCategory}>

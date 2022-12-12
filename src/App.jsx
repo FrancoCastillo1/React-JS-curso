@@ -2,7 +2,7 @@ import './App.css';
 import Header from './components/header/Header';
 import Main from './components/mainGeneral/Main';
 import ItemListContainer from './components/mainGeneral/ItemListContainer';
-import Footer from './components/footer/Footer';
+import Footer from './components/Footer/Footer';
 import ErrorURL from './components/mainGeneral/Error404';
 import ItemDetailContainer from './components/mainGeneral/SectionProductos/ItemDetailContainer';
 import ItemCategory from "./components/mainGeneral/SectionProductos/ItemCategory"
@@ -35,7 +35,7 @@ const App = () => {
           </Route>
           <Route path='/gracias/:id'element={<Gracias/>}/>
           </Routes>
-          <Footer />
+          <Footer/>
         </BrowserRouter>
       </CartContext>
       </UserContext>

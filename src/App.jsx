@@ -2,7 +2,7 @@ import './App.css';
 import Header from './components/header/Header';
 import Main from './components/mainGeneral/Main';
 import ItemListContainer from './components/mainGeneral/ItemListContainer';
-import FooterJsx from './components/Footer/FooterJsx';
+import FooterJsx from './components/FooterJSX/FooterJsx';
 import ErrorURL from './components/mainGeneral/Error404';
 import ItemDetailContainer from './components/mainGeneral/SectionProductos/ItemDetailContainer';
 import ItemCategory from "./components/mainGeneral/SectionProductos/ItemCategory"

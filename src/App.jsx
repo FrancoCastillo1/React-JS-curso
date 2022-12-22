@@ -35,7 +35,7 @@ const App = () => {
           </Route>
           <Route path='/gracias/:id'element={<Gracias/>}/>
           </Routes>
-          <Footer/>
+         <Footer/>
         </BrowserRouter>
       </CartContext>
       </UserContext>

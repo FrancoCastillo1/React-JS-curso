@@ -1,6 +1,6 @@
-import "./footer.css"
+import "./Footer.css"
 import { FaFacebook , FaYoutube ,FaTwitter ,FaInstagram} from "react-icons/fa";
-function Footer(){
+function FooterJsx(){
     return (
       <footer>
         <div className="divFooter">
@@ -57,4 +57,4 @@ function Footer(){
       </footer>
     );
 }
-export default Footer
+export default FooterJsx
